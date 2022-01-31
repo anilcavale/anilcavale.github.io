@@ -558,6 +558,14 @@ button:focus {
 
 /* End Latest Blog Area css
 ============================================================================================ */
+
+
+.welcome-area {
+  display: flex;
+  justify-self: auto;
+}
+
+
 /*================= latest_blog_area css =============*/
 .single-recent-blog-post {
   margin-bottom: 30px;
@@ -3688,6 +3696,7 @@ h6 {
 .copy_right_text p a {
   color: #766dff;
 }
+
 
 /* End Footer Area css
 ============================================================================================ */
