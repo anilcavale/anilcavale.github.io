@@ -1,18 +1,11 @@
-.skills li {
-  list-style: none;
-  display: inline-block;
-  padding: 16px 16px;
-  margin: 30px;
-  color: rgb(170, 170, 170);
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 50%;
-}
-
 .skills {
   display: flex;
   justify-content: space-around;
-  margin: auto;
-  max-width: 80%;
+  flex-wrap: wrap;
+}
+
+.skills > div {
+  margin: 20px;
 }
 
 .skills-second {
