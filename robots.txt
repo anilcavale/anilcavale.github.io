@@ -1,0 +1,7 @@
+# robots.txt — Anil Cavale Portfolio
+# REPLACE: Update Sitemap URL with your actual GitHub Pages URL
+
+User-agent: *
+Allow: /
+
+Sitemap: https://anilcavale.github.io/sitemap.xml
