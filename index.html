@@ -3,388 +3,852 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ============================================================
-       SEO: Title & Meta
-  ============================================================ -->
-  <title>Anil Cavale | Senior Data Analyst · Credit Risk Analytics · Data Science</title>
-  <meta name="description" content="Anil Cavale is a Senior Data Analyst and Data Science professional specializing in credit risk analytics, PSI/CSI drift monitoring, decisioning systems, and analytics automation. Published author at Data Science Salon." />
-  <meta name="keywords" content="Anil Cavale, Anil Cavale data science, Anil Cavale Data Science Salon, Anil Cavale PSI CSI, Anil Cavale credit risk analytics, Anil Cavale GitHub, Anil Cavale T-Mobile analytics, credit risk analytics, PSI CSI drift monitoring, data science portfolio, GitHub portfolio, decisioning systems, Snowflake, PySpark, Databricks" />
+  <title>Anil Cavale | Senior Credit Risk Analyst · Data Science</title>
+  <meta name="description" content="Anil Cavale is a Senior Credit Risk Analyst specializing in credit risk analytics, PSI/CSI drift monitoring, decisioning systems, and analytics automation. Published author at Data Science Salon." />
+  <meta name="keywords" content="Anil Cavale, credit risk analytics, PSI CSI drift monitoring, data science portfolio, decisioning systems, Snowflake, PySpark, Databricks" />
   <meta name="author" content="Anil Cavale" />
   <meta name="robots" content="index, follow" />
-
-  <!-- ============================================================
-       SEO: Canonical URL
-       REPLACE: Update with your actual GitHub Pages URL
-  ============================================================ -->
   <link rel="canonical" href="https://anilcavale.github.io/" />
-
-  <!-- ============================================================
-       SEO: Open Graph (LinkedIn, Facebook previews)
-  ============================================================ -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Anil Cavale | Senior Data Analyst · Credit Risk Analytics · Data Science" />
-  <meta property="og:description" content="Data science professional specializing in credit risk analytics, PSI/CSI drift monitoring, and decisioning systems. Published author at Data Science Salon." />
+  <meta property="og:title" content="Anil Cavale | Senior Credit Risk Analyst · Data Science" />
+  <meta property="og:description" content="Credit risk analytics leader specializing in ML-powered decisioning, PSI/CSI drift monitoring, and scalable automation." />
   <meta property="og:url" content="https://anilcavale.github.io/" />
-  <!-- REPLACE: Update og:image with a hosted URL to your profile photo -->
-  <meta property="og:image" content="assets/profile-photo.jpg" />
-  <meta property="og:site_name" content="Anil Cavale Portfolio" />
-
-  <!-- ============================================================
-       SEO: Twitter Card
-  ============================================================ -->
+  <meta property="og:image" content="assets/profile-photo.JPG" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Anil Cavale | Senior Data Analyst · Credit Risk Analytics" />
-  <meta name="twitter:description" content="Data science professional specializing in credit risk analytics, PSI/CSI drift monitoring, and decisioning systems." />
-  <!-- REPLACE: Update twitter:image with a hosted URL to your profile photo -->
-  <meta name="twitter:image" content="assets/profile-photo.jpg" />
+  <meta name="twitter:image" content="assets/profile-photo.JPG" />
 
-  <!-- ============================================================
-       SEO: JSON-LD Structured Data (schema.org Person)
-  ============================================================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Anil Cavale",
     "url": "https://anilcavale.github.io/",
-    "image": "assets/profile-photo.jpg",
-    "jobTitle": "Senior Data Analyst",
-    "description": "Senior Data Analyst and Data Science professional specializing in credit risk analytics, PSI/CSI drift monitoring, decisioning systems, and analytics automation.",
+    "image": "assets/profile-photo.JPG",
+    "jobTitle": "Senior Credit Risk Analyst",
     "email": "anilcavale@gmail.com",
-    "sameAs": [
-      "https://github.com/anilcavale",
-      "https://datasciencesalon.org"
-    ],
-    "knowsAbout": [
-      "Credit Risk Analytics",
-      "PSI CSI Drift Monitoring",
-      "Decisioning Systems",
-      "Python Automation",
-      "SQL",
-      "Snowflake",
-      "PySpark",
-      "Databricks",
-      "Machine Learning"
-    ]
+    "sameAs": ["https://github.com/anilcavale", "https://www.linkedin.com/in/anil-cavale-668398121/"]
   }
   </script>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #faf9f7;
+      --cream: #f3f1ec;
+      --stone-100: #e8e5df;
+      --stone-300: #c2bdb4;
+      --stone-500: #8a8379;
+      --stone-700: #4a4640;
+      --ink: #1a1714;
+      --accent: #1d5c8f;
+      --accent-light: #e8f1f8;
+      --green: #1a6b4a;
+      --green-light: #e6f3ed;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'Instrument Sans', system-ui, sans-serif;
+      --nav-h: 64px;
+      --max: 860px;
+      --section-gap: 6rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--off-white);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- NAV ---- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h);
+      background: rgba(250, 249, 247, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--stone-100);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--stone-700);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ---- CONTAINERS ---- */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    section { padding: var(--section-gap) 0; }
+
+    /* ---- SECTION LABELS ---- */
+    .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone-500);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--stone-500);
+      margin-bottom: 3rem;
+      max-width: 520px;
+    }
+
+    /* ---- HERO ---- */
+    #hero {
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--stone-100) 1px, transparent 1px),
+        linear-gradient(90deg, var(--stone-100) 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: 0.4;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-photo-wrap {
+      flex-shrink: 0;
+    }
+    .hero-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 1px var(--stone-100), 0 8px 32px rgba(0,0,0,0.08);
+      display: block;
+    }
+    .hero-photo-fallback {
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--accent);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 1px var(--stone-100);
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--stone-500);
+      margin-bottom: 0.5rem;
+    }
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: var(--stone-700);
+      max-width: 480px;
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 0.65rem 1.3rem;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--white);
+      border-color: var(--ink);
+    }
+    .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-secondary {
+      background: var(--white);
+      color: var(--ink);
+      border-color: var(--stone-300);
+    }
+    .btn-secondary:hover { border-color: var(--ink); background: var(--cream); }
+
+    /* ---- DIVIDER ---- */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--stone-100);
+      margin: 0;
+    }
+
+    /* ---- ABOUT ---- */
+    #about { background: var(--off-white); }
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--stone-700);
+      margin-bottom: 1.2rem;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .stat-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--stone-100);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--stone-100);
+    }
+    .stat-item {
+      background: var(--white);
+      padding: 1.25rem 1.5rem;
+    }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .stat-lbl {
+      font-size: 0.78rem;
+      color: var(--stone-500);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    /* ---- EXPERIENCE ---- */
+    #experience { background: var(--white); }
+    .timeline {
+      position: relative;
+      padding-left: 1.5rem;
+      border-left: 1px solid var(--stone-100);
+    }
+    .tl-entry {
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+    .tl-entry:last-child { padding-bottom: 0; }
+    .tl-dot {
+      position: absolute;
+      left: -1.9rem;
+      top: 0.35rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--stone-300);
+      border: 2px solid var(--off-white);
+    }
+    .tl-entry.current .tl-dot {
+      background: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-light);
+    }
+    .tl-role {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .tl-company {
+      font-size: 0.9rem;
+      color: var(--stone-500);
+    }
+    .tl-company strong { color: var(--stone-700); font-weight: 500; }
+    .tl-date {
+      font-size: 0.78rem;
+      color: var(--stone-500);
+      margin-top: 0.3rem;
+      letter-spacing: 0.02em;
+    }
+    .tl-badge {
+      display: inline-block;
+      margin-left: 0.5rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 99px;
+      background: var(--green-light);
+      color: var(--green);
+      vertical-align: middle;
+    }
+
+    /* ---- EXPERTISE ---- */
+    #expertise { background: var(--off-white); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--stone-100);
+      border: 1px solid var(--stone-100);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .skill-card {
+      background: var(--white);
+      padding: 1.5rem;
+      transition: background 0.18s;
+    }
+    .skill-card:hover { background: var(--cream); }
+    .skill-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .skill-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .skill-desc {
+      font-size: 0.83rem;
+      color: var(--stone-500);
+      line-height: 1.6;
+    }
+
+    /* ---- PUBLICATIONS ---- */
+    #publications { background: var(--white); }
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--stone-100);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--stone-100);
+    }
+    .pub-card {
+      background: var(--white);
+      padding: 1.75rem 2rem;
+      transition: background 0.18s;
+    }
+    .pub-card:hover { background: var(--cream); }
+    .pub-source {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .pub-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+      line-height: 1.35;
+    }
+    .pub-venue {
+      font-size: 0.8rem;
+      color: var(--stone-500);
+      margin-bottom: 0.75rem;
+    }
+    .pub-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      background: var(--cream);
+      color: var(--stone-700);
+      border: 1px solid var(--stone-100);
+    }
+
+    /* ---- PROJECTS ---- */
+    #projects { background: var(--off-white); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--stone-100);
+      border: 1px solid var(--stone-100);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .project-card {
+      background: var(--white);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-decoration: none;
+      transition: background 0.18s;
+    }
+    .project-card:hover { background: var(--cream); }
+    .project-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+    .project-desc {
+      font-size: 0.83rem;
+      color: var(--stone-500);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .project-meta {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .project-lang, .project-stars {
+      font-size: 0.75rem;
+      color: var(--stone-500);
+    }
+    .projects-loading {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: var(--stone-500);
+      font-size: 0.9rem;
+      background: var(--white);
+    }
+    .projects-cta {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    /* ---- CONTACT ---- */
+    #contact { background: var(--white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--stone-100);
+      border: 1px solid var(--stone-100);
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 640px;
+    }
+    .contact-card {
+      background: var(--white);
+      padding: 1.5rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      transition: background 0.18s;
+    }
+    .contact-card:hover { background: var(--cream); }
+    .contact-icon {
+      color: var(--stone-300);
+      margin-bottom: 0.25rem;
+    }
+    .contact-lbl {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--stone-500);
+    }
+    .contact-val {
+      font-size: 0.85rem;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid var(--stone-100);
+      background: var(--off-white);
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+      font-size: 0.8rem;
+      color: var(--stone-500);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 700px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+      .hero-photo-wrap { display: flex; justify-content: center; }
+      .hero-tagline { margin: 0 auto 2rem; }
+      .hero-actions { justify-content: center; }
+      .about-layout { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
 </head>
-<body data-theme="Light">
+<body>
 
-  <!-- ============================================================
-       NAVIGATION
-  ============================================================ -->
-  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <!-- NAV -->
+  <nav aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo" aria-label="Anil Cavale home">AC</a>
+      <a href="#hero" class="nav-logo">Anil Cavale</a>
       <ul class="nav-links" role="list">
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#expertise">Expertise</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-        <span class="theme-icon">☀</span>
-      </button>
-      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <!-- Mobile menu -->
-    <div class="nav-mobile" id="navMobile" role="menu">
-      <a href="#about" role="menuitem">About</a>
-      <a href="#expertise" role="menuitem">Expertise</a>
-      <a href="#publications" role="menuitem">Publications</a>
-      <a href="#projects" role="menuitem">Projects</a>
-      <a href="#contact" role="menuitem">Contact</a>
     </div>
   </nav>
 
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
-  <section id="hero" class="hero" aria-labelledby="hero-name">
-    <div class="hero-bg-grid" aria-hidden="true"></div>
-    <div class="hero-orbs" aria-hidden="true">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-    </div>
-
+  <!-- HERO -->
+  <section id="hero" aria-labelledby="hero-name">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-photo-wrap">
-        <!-- REPLACE: Add your actual photo to assets/profile-photo.jpg -->
         <img
-          src="assets/profile-photo.jpg"
-          alt="Anil Cavale — Senior Data Analyst and Data Science professional"
+          src="assets/profile-photo.JPG"
+          alt="Anil Cavale, Senior Credit Risk Analyst"
           class="hero-photo"
-          onerror="this.style.display='none'; document.querySelector('.hero-photo-placeholder').style.display='flex';"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
-        <div class="hero-photo-placeholder" aria-hidden="true">
-          <span>AC</span>
-        </div>
+        <div class="hero-photo-fallback" aria-hidden="true">AC</div>
       </div>
-
       <div class="hero-text">
-        <p class="hero-eyebrow">Data Science &amp; Credit Risk Analytics</p>
-        <!-- Only one H1 on the page -->
+        <p class="hero-eyebrow">Credit Risk Analytics · Data Science</p>
         <h1 id="hero-name">Anil Cavale</h1>
-        <p class="hero-title">Senior Data Analyst&nbsp;·&nbsp;Data Science&nbsp;·&nbsp;Credit Risk Analytics&nbsp;·&nbsp;Decisioning Systems</p>
-        <p class="hero-tagline">I build analytics systems that monitor risk, detect drift, automate decisioning, and turn complex data into production-ready insights.</p>
-
+        <p class="hero-subtitle">Senior Credit Risk Analyst · Overland Park, KS</p>
+        <p class="hero-tagline">Credit risk analytics leader delivering ML-powered decisioning, drift monitoring, and scalable automation.</p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View Projects</a>
-          <!-- REPLACE: Add your resume PDF to assets/Anil_Cavale_Resume.pdf -->
-          <a href="assets/Anil_Cavale_Resume.docx" class="btn btn-secondary" download aria-label="Download Anil Cavale resume PDF">Download Resume / Hire Me</a>
-          <a href="https://github.com/anilcavale" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" aria-label="Anil Cavale on GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="assets/Anil_Cavale_Resume.docx" class="btn btn-secondary" download>Download Resume</a>
+          <a href="https://github.com/anilcavale" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
-          <!-- REPLACE: Update with your actual LinkedIn profile URL -->
-          <a href="https://www.linkedin.com/in/anil-cavale-668398121/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" aria-label="Anil Cavale on LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://www.linkedin.com/in/anil-cavale-668398121/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
         </div>
       </div>
     </div>
-
-    <a href="#about" class="hero-scroll-cue" aria-label="Scroll to about section">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-    </a>
   </section>
 
-  <!-- ============================================================
-       ABOUT
-  ============================================================ -->
-  <section id="about" class="section section-about" aria-labelledby="about-heading">
+  <hr class="divider" />
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-heading">
     <div class="container">
-      <div class="section-label" aria-hidden="true">01 / About</div>
+      <p class="label">01 / About</p>
       <h2 id="about-heading" class="section-title">About Me</h2>
-      <div class="about-grid">
+      <div class="about-layout">
         <div class="about-text">
-          <p>
-            I'm a data analytics professional with deep experience building production-grade monitoring frameworks, credit risk decisioning systems, and automation pipelines that operate at scale. My work sits at the intersection of data engineering, statistical modeling, and business strategy — translating complex signals into decisions that matter.
-          </p>
-          <p>
-            Over my career I've designed and deployed bureau optimization workflows, population stability monitoring systems (PSI/CSI), and end-to-end analytics automation on platforms like Databricks, Snowflake, and PySpark. I bring a methodical, engineering-minded approach to every problem — whether that's detecting model drift in a credit scoring pipeline or forecasting e-commerce performance for a digital marketing strategy.
-          </p>
-          <p>
-            I'm a published author at <strong>Data Science Salon</strong>, where I've written on characteristic stability index methodologies for categorical drift monitoring — a niche but critical problem in production ML systems. I also presented research on e-commerce performance forecasting at the <strong>Midwest Decision Sciences Institute Conference</strong> (2022).
-          </p>
-          <p>
-            My approach is simple: build things that work in the real world, document them well, and make them reproducible. If you're looking for someone who can bridge the gap between raw data and operational intelligence — let's talk.
-          </p>
+          <p>I'm a credit risk analytics leader with deep experience building production-grade ML-powered decisioning programs, monitoring frameworks, and automation pipelines that operate at enterprise scale. My work sits at the intersection of data engineering, statistical modeling, and business strategy.</p>
+          <p>I've designed and deployed bureau optimization workflows, population stability monitoring systems (PSI/CSI), and end-to-end analytics automation on platforms like Databricks, Snowflake, and PySpark. Whether that's detecting model drift in a credit scoring pipeline or building decisioning architecture for 1M+ monthly credit checks, I bring an engineering-minded approach to every problem.</p>
+          <p>Published author at <strong>Data Science Salon</strong> on CSI methodologies for categorical drift monitoring. Research presented at the <strong>Midwest Decision Sciences Institute Conference</strong> (2022). Vice Chair, <strong>IEEE Kansas Communications Society Chapter</strong>.</p>
         </div>
-        <div class="about-stats" aria-label="Professional highlights">
-          <div class="stat-card">
-            <span class="stat-number">5+</span>
-            <span class="stat-label">Years in Credit Risk Analytics</span>
+        <div class="stat-stack" role="list" aria-label="Professional highlights">
+          <div class="stat-item">
+            <div class="stat-num">5+</div>
+            <div class="stat-lbl">Years in Credit Risk</div>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">2</span>
-            <span class="stat-label">Published Works</span>
+          <div class="stat-item">
+            <div class="stat-num">2</div>
+            <div class="stat-lbl">Published Works</div>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">∞</span>
-            <span class="stat-label">Production Pipelines</span>
+          <div class="stat-item">
+            <div class="stat-num">PSI · CSI</div>
+            <div class="stat-lbl">Drift Monitoring Specialist</div>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">PSI·CSI</span>
-            <span class="stat-label">Drift Monitoring Specialist</span>
+          <div class="stat-item">
+            <div class="stat-num">DBA</div>
+            <div class="stat-lbl">In Progress, Ottawa University</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       FEATURED EXPERTISE
-  ============================================================ -->
-  <section id="expertise" class="section section-expertise" aria-labelledby="expertise-heading">
+  <hr class="divider" />
+
+  <!-- EXPERIENCE -->
+  <section id="experience" aria-labelledby="experience-heading">
     <div class="container">
-      <div class="section-label" aria-hidden="true">02 / Expertise</div>
-      <h2 id="expertise-heading" class="section-title">Featured Expertise</h2>
-      <p class="section-subtitle">Core domains where I build production-ready systems and frameworks.</p>
-      <ul class="expertise-grid" role="list">
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">📊</div>
-          <h3>Credit Risk Analytics</h3>
-          <p>Bureau optimization, scorecard development, credit decisioning pipelines, and risk-tier segmentation at enterprise scale.</p>
-        </li>
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">📉</div>
-          <h3>PSI / CSI Drift Monitoring</h3>
-          <p>Population and Characteristic Stability Index frameworks for detecting model and data drift in production ML pipelines.</p>
-        </li>
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">🐍</div>
-          <h3>Python Automation</h3>
-          <p>End-to-end analytics automation, ETL pipelines, reporting frameworks, and reusable toolkits for data science teams.</p>
-        </li>
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">❄️</div>
-          <h3>SQL / Snowflake</h3>
-          <p>Complex analytical queries, data modeling, and cloud data warehouse optimization across Snowflake environments.</p>
-        </li>
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">⚡</div>
-          <h3>PySpark / Databricks</h3>
-          <p>Distributed data processing, large-scale feature engineering, and ML workflow orchestration on Databricks.</p>
-        </li>
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">🎯</div>
-          <h3>Decisioning Systems</h3>
-          <p>Automated credit decisioning, strategy trees, cutoff optimization, and real-time risk decisioning frameworks.</p>
-        </li>
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">🔍</div>
-          <h3>Data Quality Monitoring</h3>
-          <p>Automated data quality checks, anomaly detection, pipeline health dashboards, and alert systems for production data.</p>
-        </li>
-        <li class="expertise-card" role="listitem">
-          <div class="expertise-icon" aria-hidden="true">📈</div>
-          <h3>Tableau / Power BI</h3>
-          <p>Executive dashboards, KPI tracking systems, self-service analytics, and data storytelling for business stakeholders.</p>
-        </li>
-      </ul>
+      <p class="label">02 / Experience</p>
+      <h2 id="experience-heading" class="section-title">Work Experience</h2>
+      <p class="section-sub">A career spanning credit risk, e-commerce analytics, and digital media.</p>
+      <div class="timeline">
+        <div class="tl-entry current">
+          <div class="tl-dot"></div>
+          <div class="tl-role">Senior Credit Risk Analyst <span class="tl-badge">Current</span></div>
+          <div class="tl-company"><strong>T-Mobile USA, Inc.</strong> · Overland Park, KS</div>
+          <div class="tl-date">Oct 2023 – Present</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-role">Credit Risk Analyst</div>
+          <div class="tl-company"><strong>T-Mobile USA, Inc.</strong> · Overland Park, KS</div>
+          <div class="tl-date">Jul 2022 – Oct 2023</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-role">Analytics Consultant</div>
+          <div class="tl-company"><strong>Antique Candle Co.</strong> · Lafayette, IN</div>
+          <div class="tl-date">Jan 2022 – May 2022</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-role">Associate Campaign Manager</div>
+          <div class="tl-company"><strong>Media.net</strong> · Mumbai, India</div>
+          <div class="tl-date">Jun 2020 – Apr 2021</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-role">Marketing Data Analyst</div>
+          <div class="tl-company"><strong>LocalIQ</strong> · Mumbai, India</div>
+          <div class="tl-date">Aug 2019 – Jan 2020</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       PUBLISHED WORK
-  ============================================================ -->
-  <section id="publications" class="section section-publications" aria-labelledby="publications-heading">
-    <div class="container">
-      <div class="section-label" aria-hidden="true">03 / Publications</div>
-      <h2 id="publications-heading" class="section-title">Published Work</h2>
-      <p class="section-subtitle">Peer-reviewed research and industry publications on data science and analytics.</p>
+  <hr class="divider" />
 
-      <div class="publications-list">
-        <article class="publication-card" aria-labelledby="pub1-title">
-          <div class="pub-badge">Data Science Salon</div>
-          <h3 id="pub1-title">Characteristic Stability Index for Categorical Data Drift Monitoring</h3>
-          <p class="pub-venue">Published Author · Data Science Salon</p>
-          <p class="pub-description">
-            An in-depth exploration of using the Characteristic Stability Index (CSI) for monitoring categorical feature drift in production machine learning systems. Covers methodology, implementation patterns, and practical thresholds for detecting meaningful distribution shifts in credit risk and decisioning pipelines. Anil Cavale's work on PSI/CSI has been recognized by the data science community.
-          </p>
-          <div class="pub-tags" aria-label="Topics">
+  <!-- EXPERTISE -->
+  <section id="expertise" aria-labelledby="expertise-heading">
+    <div class="container">
+      <p class="label">03 / Expertise</p>
+      <h2 id="expertise-heading" class="section-title">Featured Expertise</h2>
+      <p class="section-sub">Core domains where I build production-ready systems and frameworks.</p>
+      <div class="skills-grid" role="list">
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">📊</div>
+          <div class="skill-name">Credit Risk Analytics</div>
+          <div class="skill-desc">Bureau optimization, scorecard development, and risk-tier segmentation at enterprise scale.</div>
+        </div>
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">📉</div>
+          <div class="skill-name">PSI / CSI Drift Monitoring</div>
+          <div class="skill-desc">Population and Characteristic Stability Index frameworks for detecting model drift in production ML pipelines.</div>
+        </div>
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">🐍</div>
+          <div class="skill-name">Python Automation</div>
+          <div class="skill-desc">End-to-end analytics automation, ETL pipelines, and reusable toolkits for data science teams.</div>
+        </div>
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">❄️</div>
+          <div class="skill-name">SQL / Snowflake</div>
+          <div class="skill-desc">Complex analytical queries, data modeling, and cloud data warehouse optimization.</div>
+        </div>
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">⚡</div>
+          <div class="skill-name">PySpark / Databricks</div>
+          <div class="skill-desc">Distributed data processing, feature engineering, and ML workflow orchestration.</div>
+        </div>
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">🎯</div>
+          <div class="skill-name">Decisioning Systems</div>
+          <div class="skill-desc">Automated credit decisioning, strategy trees, cutoff optimization, and real-time risk frameworks.</div>
+        </div>
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">🔍</div>
+          <div class="skill-name">Data Quality Monitoring</div>
+          <div class="skill-desc">Automated quality checks, anomaly detection, and pipeline health dashboards for production data.</div>
+        </div>
+        <div class="skill-card" role="listitem">
+          <div class="skill-icon">📈</div>
+          <div class="skill-name">Tableau / Power BI</div>
+          <div class="skill-desc">Executive dashboards, KPI tracking, and data storytelling for business stakeholders.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" aria-labelledby="publications-heading">
+    <div class="container">
+      <p class="label">04 / Publications</p>
+      <h2 id="publications-heading" class="section-title">Published Work</h2>
+      <p class="section-sub">Research and industry publications on data science and analytics.</p>
+      <div class="pub-list">
+        <div class="pub-card">
+          <div class="pub-source">Data Science Salon · 2026</div>
+          <div class="pub-title">Characteristic Stability Index for Categorical Data Drift Monitoring</div>
+          <div class="pub-venue">Published Author</div>
+          <div class="pub-tags">
             <span class="tag">CSI</span>
             <span class="tag">Drift Monitoring</span>
             <span class="tag">Credit Risk</span>
             <span class="tag">Production ML</span>
           </div>
-        </article>
-
-        <article class="publication-card" aria-labelledby="pub2-title">
-          <div class="pub-badge">Conference Proceedings</div>
-          <h3 id="pub2-title">E-Commerce Performance Forecasting and Digital Marketing Optimization</h3>
-          <p class="pub-venue">Proceedings of the Midwest Decision Sciences Institute Conference · April 1, 2022</p>
-          <p class="pub-description">
-            Peer-reviewed research presented at the Midwest Decision Sciences Institute Conference examining data-driven approaches to forecasting e-commerce performance metrics and optimizing digital marketing spend. Applies statistical modeling and decision science methods to real-world marketing attribution challenges.
-          </p>
-          <div class="pub-tags" aria-label="Topics">
+        </div>
+        <div class="pub-card">
+          <div class="pub-source">Conference Proceedings · 2022</div>
+          <div class="pub-title">E-Commerce Performance Forecasting and Digital Marketing Optimization</div>
+          <div class="pub-venue">Midwest Decision Sciences Institute Conference</div>
+          <div class="pub-tags">
             <span class="tag">Forecasting</span>
             <span class="tag">E-Commerce</span>
-            <span class="tag">Digital Marketing</span>
             <span class="tag">Decision Science</span>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       GITHUB PROJECTS
-  ============================================================ -->
-  <section id="projects" class="section section-projects" aria-labelledby="projects-heading">
-    <div class="container">
-      <div class="section-label" aria-hidden="true">04 / Projects</div>
-      <h2 id="projects-heading" class="section-title">GitHub Projects</h2>
-      <p class="section-subtitle">Open-source work from <a href="https://github.com/anilcavale" target="_blank" rel="noopener noreferrer" aria-label="Anil Cavale GitHub profile">github.com/anilcavale</a> — updated in real time.</p>
-
-      <div id="projects-container" class="projects-grid" role="list" aria-live="polite" aria-label="GitHub repositories">
-        <!-- Repos injected by script.js -->
-        <div class="projects-loading" aria-label="Loading GitHub projects">
-          <div class="spinner" aria-hidden="true"></div>
-          <p>Fetching repositories…</p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <hr class="divider" />
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <p class="label">05 / Projects</p>
+      <h2 id="projects-heading" class="section-title">GitHub Projects</h2>
+      <p class="section-sub">Open-source work from <a href="https://github.com/anilcavale" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/anilcavale</a>, fetched live.</p>
+      <div class="projects-grid" id="projects-container" role="list" aria-live="polite">
+        <div class="projects-loading">
+          <p>Fetching repositories...</p>
+        </div>
+      </div>
       <div class="projects-cta">
-        <a href="https://github.com/anilcavale" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-          View All on GitHub →
-        </a>
+        <a href="https://github.com/anilcavale" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View All on GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       CONTACT
-  ============================================================ -->
-  <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
-    <div class="container">
-      <div class="section-label" aria-hidden="true">05 / Contact</div>
-      <h2 id="contact-heading" class="section-title">Get in Touch</h2>
-      <p class="section-subtitle">Interested in collaborating, hiring, or discussing analytics and data science? Reach out.</p>
+  <hr class="divider" />
 
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <p class="label">06 / Contact</p>
+      <h2 id="contact-heading" class="section-title">Get in Touch</h2>
+      <p class="section-sub">Open to collaborating, consulting, or just talking analytics.</p>
       <div class="contact-grid">
         <a href="mailto:anilcavale@gmail.com" class="contact-card" aria-label="Email Anil Cavale">
-          <div class="contact-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
-          <div>
-            <p class="contact-label">Email</p>
-            <p class="contact-value">anilcavale@gmail.com</p>
-          </div>
+          <div class="contact-lbl">Email</div>
+          <div class="contact-val">anilcavale@gmail.com</div>
         </a>
-
-        <a href="https://github.com/anilcavale" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="Anil Cavale on GitHub">
-          <div class="contact-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        <a href="https://github.com/anilcavale" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
           </div>
-          <div>
-            <p class="contact-label">GitHub</p>
-            <p class="contact-value">github.com/anilcavale</p>
-          </div>
+          <div class="contact-lbl">GitHub</div>
+          <div class="contact-val">anilcavale</div>
         </a>
-
-        <!-- REPLACE: Update href with your actual LinkedIn URL -->
-        <a href="https://www.linkedin.com/in/anil-cavale-668398121/" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="Anil Cavale on LinkedIn">
-          <div class="contact-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 .774 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <a href="https://www.linkedin.com/in/anil-cavale-668398121/" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </div>
-          <div>
-            <p class="contact-label">LinkedIn</p>
-            <p class="contact-value">Connect on LinkedIn</p>
-          </div>
+          <div class="contact-lbl">LinkedIn</div>
+          <div class="contact-val">Connect</div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <p>
-        &copy; <span id="year"></span> Anil Cavale · Senior Data Analyst · Credit Risk Analytics · Data Science
-        <span class="footer-sep" aria-hidden="true">·</span>
-        Built for GitHub Pages
-      </p>
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; <span id="year"></span> Anil Cavale</span>
+      <span>Senior Credit Risk Analyst · Overland Park, KS</span>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
